@@ -1,0 +1,21 @@
+@font-face {
+  font-family: AvenirNext-Bold;
+  src: url("./assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: AvenirNext-Demi;
+  src: url("./assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+}
+
+@font-face {
+  font-family: AvenirNext-Regular;
+  src: url("./assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+}
+
+@import "tailwindcss";
+@theme {
+  --font-avenirnext-regular: "AvenirNext-Regular", monospace;
+  --font-avenirnext-demi: "AvenirNext-Demi", monospace;
+  --font-avenirnext-bold: "AvenirNext-Bold", monospace;
+}
