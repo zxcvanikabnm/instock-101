@@ -11,6 +11,17 @@ export const getAllWarehouses = async (req, res) => {
     }
 };
 
+// GET warehouse by ID
+export const getWarehouseById = async (req, res) => {
+    try {
+        const warehouse = await Warehouse.findById(req.params.id);
+        if (!warehouse) return res.status(404).json({ error: "Not found" });
+        res.json(warehouse);
+    } catch (err) {
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
 // POST create a new warehouse
 // tested on postman and it works
 export const addWarehouse = async (req, res) => {

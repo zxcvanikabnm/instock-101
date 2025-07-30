@@ -1,11 +1,12 @@
 // server/routes/warehouse.js
 import express from "express";
 import {
-  getAllWarehouses,
-  deleteWarehouse,
-  updateWarehouse,
-  addWarehouse,
-  getWarehouseByLocation,
+    getAllWarehouses,
+    getWarehouseById,
+    deleteWarehouse,
+    updateWarehouse,
+    addWarehouse,
+    getWarehouseByLocation,
 } from "../controllers/warehouseController.js";
 
 const router = express.Router();
@@ -21,6 +22,9 @@ router.delete("/:id", deleteWarehouse);
 
 // PUT update by ID
 router.put("/:id", updateWarehouse);
+
+// GET warehouse by ID
+router.get("/:id", getWarehouseById);
 
 // Optional: filter by location (e.g., ?location=Toronto)
 router.get("/search/location", getWarehouseByLocation);
