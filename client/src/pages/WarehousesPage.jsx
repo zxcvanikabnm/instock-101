@@ -4,8 +4,7 @@ import Navbar from "../ui/Navbar";
 function WarehousesPage() {
   return (
     <>
-        <Navbar />
-        <Warehouse />   
+      <Warehouse />
     </>
   );
 }

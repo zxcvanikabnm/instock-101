@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import Layout from "./ui/Layout";
+
 import { loader as warehouseLoader } from "./features/warehouse/Warehouse";
 import WarehousesPage from "./pages/WarehousesPage";
 
@@ -9,16 +11,22 @@ import WarehouseDetail, {
 } from "./features/warehouse/WarehouseDetail";
 
 const router = createBrowserRouter([
-  {
-    path: "/warehouses",
-    element: <WarehousesPage />,
-    loader: warehouseLoader,
-  },
-  {
-    path: "/warehouses/:id",
-    element: <WarehouseDetail />,
-    loader: warehouseDetailLoader,
-  },
+    {
+        path: "/",
+        element: <Layout />,
+        children: [
+            {
+                path: "/warehouses",
+                element: <WarehousesPage />,
+                loader: warehouseLoader,
+            },
+            {
+                path: "/warehouses/:id",
+                element: <WarehouseDetail />,
+                loader: warehouseDetailLoader,
+            },
+        ]
+    }
 ]);
 
 function App() {
