@@ -38,7 +38,13 @@ function WarehouseDetail() {
       <section aria-label="Inventory list">
         <ul className="divide-y divide-stone-200 px-2">
           {warehouseInventory.map((item) => (
-            <li key={item._id || item.id}>{item.productName}</li>
+            <li key={item._id}>
+                <p>{item.productName}</p>
+                <p>{item.categories}</p>
+                <p>{item.status}</p>
+                <p>{item.quantity}</p>
+                <p>{item.location}</p>
+            </li>
           ))}
         </ul>
       </section>
