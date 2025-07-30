@@ -21,8 +21,21 @@
 }
 
 body {
-    font-family: "AvenirNext-Regular";
-    font-size: 16px;
+  position: relative;
+  font-family: "AvenirNext-Regular";
+  font-size: 16px;
+  background-color: rgb(247, 248, 249);
+}
+
+.warehouse {
+    margin-top: -95px;
+}
+
+@media (min-width: 1024px) {
+  /* styles for screens larger than 1024px */
+  .warehouse {
+    margin-top: -100px;
+  }
 }
 
 @layer components {
@@ -78,4 +91,3 @@ body {
     }
   }
 }
-
