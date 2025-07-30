@@ -3,7 +3,7 @@ import arrow from "../../assets/icon/icon-arrow-right.svg";
 
 function WarehouseItem({ item }) {
   const {
-    id,
+    _id,
     warehouse,
     addressStreet,
     addressProv,
