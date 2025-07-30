@@ -10,14 +10,14 @@ function WarehouseItem({ item }) {
     contactName,
     contactNumber,
     contactEmail,
-    inventory
+    inventory,
   } = item;
 
   return (
     <div>
       <ul>
         <li>
-          <Link to={`/warehouses/${id}`} inventory={inventory} >
+          <Link to={`/warehouses/${_id}`}>
             {warehouse}
             <img src={arrow} alt="arrow" />
           </Link>
