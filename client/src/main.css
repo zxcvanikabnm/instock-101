@@ -20,7 +20,24 @@
   --font-avenirnext-bold: "AvenirNext-Bold", monospace;
 }
 
+body {
+    font-family: "AvenirNext-Regular";
+    font-size: 16px;
+}
+
 @layer components {
+  .main-button {
+    @apply w-[50%] min-w-[125px] rounded-full py-2 text-center text-white;
+  }
+
+  .main-button-active {
+    @apply bg-slate-950;
+  }
+
+  .main-button-inactive {
+    @apply hover:bg-slate-900;
+  }
+
   /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
   .loader {
     width: 45px;

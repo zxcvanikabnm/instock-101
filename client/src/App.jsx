@@ -10,6 +10,8 @@ import WarehouseDetail, {
   loader as warehouseDetailLoader,
 } from "./features/warehouse/WarehouseDetail";
 
+import InventoryPage from "./pages/InventoryPage";
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
                 element: <WarehouseDetail />,
                 loader: warehouseDetailLoader,
             },
+            {
+                path: "/inventory",
+                element: <InventoryPage />,
+            }
         ]
     }
 ]);
