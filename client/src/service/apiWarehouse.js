@@ -11,12 +11,12 @@ export async function getAllWarehouse() {
   }
 }
 
-// export async function getWarehouseById(id) {
-//   try {
-//     const res = await axios.get(`${API_URL}/warehouses/${id}`);
-//     return res.data;
-//   } catch (err) {
-//     throw Error("Failed getting warehouse by ID");
-//   }
-// }
-
+export async function getWarehouseById(_id) {
+  try {
+    const res = await axios.get(`${API_URL}/warehouses/${_id}`);
+    if (!res.data) throw new Error("Warehouse not found");
+    return res.data;
+  } catch (err) {
+    throw Error("Failed getting warehouse by ID");
+  }
+}

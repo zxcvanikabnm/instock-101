@@ -1,33 +1,30 @@
-import { Link } from "react-router-dom";
 import arrow from "../../assets/icon/icon-arrow-right.svg";
+import WarehouseInfo from "./WarehouseInfo";
 
 function WarehouseItem({ item }) {
   const {
     _id,
-    warehouse,
+    warehouse: warehouseName,
     addressStreet,
     addressProv,
     contactName,
     contactNumber,
     contactEmail,
-    inventory,
   } = item;
 
   return (
     <div>
-      <ul>
-        <li>
-          <Link to={`/warehouses/${_id}`}>
-            {warehouse}
-            <img src={arrow} alt="arrow" />
-          </Link>
-        </li>
-        <li>{addressStreet}</li>
-        <li>{addressProv}</li>
-        <li>{contactName}</li>
-        <li>{contactNumber}</li>
-        <li>{contactEmail}</li>
-      </ul>
+      <WarehouseInfo
+          to={`/warehouses/${_id}`}
+          src={arrow}
+          alt="arrow"
+          warehouseName={warehouseName}
+          addressStreet={addressStreet}
+          addressProv={addressProv}
+          contactName={contactName}
+          contactNumber={contactNumber}
+          contactEmail={contactEmail}
+        />
     </div>
   );
 }
