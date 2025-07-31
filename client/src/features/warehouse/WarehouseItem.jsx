@@ -13,18 +13,19 @@ function WarehouseItem({ item }) {
   } = item;
 
   return (
-    <div>
+    <div className="py-4">
       <WarehouseInfo
-          to={`/warehouses/${_id}`}
-          src={arrow}
-          alt="arrow"
-          warehouseName={warehouseName}
-          addressStreet={addressStreet}
-          addressProv={addressProv}
-          contactName={contactName}
-          contactNumber={contactNumber}
-          contactEmail={contactEmail}
-        />
+        to={`/warehouses/${_id}`}
+        src={arrow}
+        alt="arrow"
+        imagePos="after"
+        warehouseName={warehouseName}
+        addressStreet={addressStreet}
+        addressProv={addressProv}
+        contactName={contactName}
+        contactNumber={contactNumber}
+        contactEmail={contactEmail}
+      />
     </div>
   );
 }
