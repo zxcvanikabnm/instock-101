@@ -30,7 +30,7 @@ body {
 h2 {
   color: #5c667e;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 p {
@@ -44,7 +44,7 @@ p {
 
 .location-link {
   color: #2e66e5;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -72,6 +72,13 @@ p {
     @apply hover:bg-slate-900;
   }
 
+  .alternate-button {
+    @apply rounded-[50%] py-4 px-4 text-center text-white bg-[#2e66e5];
+  }
+
+  .warning-button {
+    @apply rounded-[50%] py-4 px-2 text-white bg-red-500 hover:bg-red-600;
+  }
   /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
   .loader {
     width: 45px;
